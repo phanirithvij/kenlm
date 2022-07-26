@@ -23,3 +23,7 @@ jobs:
     - name: Test
       working-directory: build
       run: ctest -j2
+    - uses: actions/upload-artifact@v3
+      with:
+        name: kenlm-build
+        path: build
